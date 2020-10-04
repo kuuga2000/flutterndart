@@ -14,10 +14,12 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purpleAccent[700],
       ),
       body: Center(
-          child: Icon(
-            Icons.airport_shuttle,
+          child: RaisedButton(
+            onPressed: () {
+              print("Ты клик на Меня!");
+            },
+            child: Text('Twitch'),
             color: Colors.purpleAccent[700],
-            size: 50
           )
       ),
       floatingActionButton: FloatingActionButton(
