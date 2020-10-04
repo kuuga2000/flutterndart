@@ -16,31 +16,36 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[700],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      body: Row(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Text("Hello"),
-              Text("World")
-            ],
+          Expanded(
+              child: Image.asset('assets/images/airplane-5216583_960_720.jpg'),
+            flex: 3
           ),
-          Container(
-            padding: EdgeInsets.all(20.0),
-            color: Colors.purpleAccent[700],
-            child: Text("One")
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              child: Text('1'),
+              color:Colors.purpleAccent[700],
+            ),
           ),
-          Container(
-              padding: EdgeInsets.all(20.0),
-              color: Colors.purpleAccent[700],
-              child: Text("Two")
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              child: Text('2'),
+              color:Colors.greenAccent[700],
+            ),
           ),
-          Container(
-              padding: EdgeInsets.all(20.0),
-              color: Colors.purpleAccent[700],
-              child: Text("Three")
-          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              child: Text('3'),
+              color:Colors.blueAccent[700],
+            ),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(
