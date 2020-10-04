@@ -14,14 +14,8 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purpleAccent[700],
       ),
       body: Center(
-          child: Text(
-              "как дела?",
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: Colors.redAccent,
-                fontFamily: 'Lobster',
-              )
+          child: Image(
+            image: NetworkImage('https://cdn.pixabay.com/photo/2013/08/06/19/13/plane-170272_960_720.jpg')
           )
       ),
       floatingActionButton: FloatingActionButton(
