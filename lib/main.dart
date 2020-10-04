@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -15,14 +16,22 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[700],
       ),
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
-        child: Text(
-          "как дела?",
-          style: TextStyle(
-              color: Colors.purpleAccent[700]
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: <Widget>[
+          Text("Привиет Мир!"),
+          FlatButton(
+            onPressed: (){},
+            color: Colors.deepPurpleAccent[700],
+            child: Text("Click me")
+          ),
+          Container(
+            color:Colors.purpleAccent[700],
+            padding: EdgeInsets.all(15),
+            child: Text("Inside Container")
           )
-        ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
           child: Text("+"),
