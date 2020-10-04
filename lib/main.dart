@@ -4,53 +4,34 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home()
+  home: QuoteList()
 ));
 
-class Home extends StatelessWidget {
+class QuoteList extends StatefulWidget {
+  @override
+  _QuoteListState createState() => _QuoteListState();
+}
+
+class _QuoteListState extends State<QuoteList> {
+  List<String> quotes = [
+    "Repetition is the path to mastery",
+    "You cannot after two horses at the same time",
+    "The pain is the best teacherxXr"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       appBar: AppBar(
-        title: Text('привиет!'),
+        title: Text("вапвапавп"),
         centerTitle: true,
-        backgroundColor: Colors.purpleAccent[700],
+        backgroundColor: Colors.deepPurpleAccent,
       ),
-      body: Row(
-        children: <Widget>[
-          Expanded(
-              child: Image.asset('assets/images/airplane-5216583_960_720.jpg'),
-            flex: 3
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(15.0),
-              child: Text('1'),
-              color:Colors.purpleAccent[700],
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(15.0),
-              child: Text('2'),
-              color:Colors.greenAccent[700],
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(15.0),
-              child: Text('3'),
-              color:Colors.blueAccent[700],
-            ),
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-          child: Text("+"),
-        backgroundColor: Colors.purpleAccent[700],
+      body: Column(
+        /*children: quotes.map((quote){
+          return Text(quote);
+        }).toList()*/
+        children: quotes.map((quote)=>Text(quote)).toList(),
       ),
     );
   }
