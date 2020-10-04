@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -13,19 +15,20 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[700],
       ),
-      body: Center(
-          child: IconButton(
-            onPressed: () {
-              print("Ты клик на Меня!");
-            },
-            color: Colors.purpleAccent[700],
-            icon: Icon(
-                Icons.mail
-            )
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
+        color: Colors.blueGrey[900],
+        child: Text(
+          "как дела?",
+          style: TextStyle(
+              color: Colors.white
           )
+        ),
       ),
       floatingActionButton: FloatingActionButton(
-          child: Text("+")
+          child: Text("+"),
+        backgroundColor: Colors.purpleAccent[700],
       ),
     );
   }
