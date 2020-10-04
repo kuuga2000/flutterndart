@@ -15,14 +15,12 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.purpleAccent[700],
       ),
-      body: Container(
-        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-        margin: EdgeInsets.fromLTRB(10, 10, 0, 0),
-        color: Colors.blueGrey[900],
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
         child: Text(
           "как дела?",
           style: TextStyle(
-              color: Colors.white
+              color: Colors.purpleAccent[700]
           )
         ),
       ),
