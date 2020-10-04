@@ -7,6 +7,11 @@ void main() {
   print(userTwo.username);
   print(userTwo.age);
   userOne.login();
+
+  SuperUser userThree = SuperUser("Puck", 20);
+  print(userThree.username);
+  print(userThree.age);
+  userThree.login();
 }
 
 class User {
@@ -20,5 +25,12 @@ class User {
 
   void login() {
     print('user logged in');
+  }
+}
+
+class SuperUser extends User{
+  SuperUser(String username, int age) : super (username, age);
+  void publish() {
+    print("Publish Update");
   }
 }
