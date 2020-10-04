@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Text("Hey Guo!"),
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text('привиет!'),
+      centerTitle: true,
+    ),
+    body: Text('Как дела!!')
+  )
 ));
