@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
       ),
       body: Center(
           child: Image(
-            image: NetworkImage('https://cdn.pixabay.com/photo/2013/08/06/19/13/plane-170272_960_720.jpg')
+            image: AssetImage('assets/images/grove-3799806_960_720.jpg')
           )
       ),
       floatingActionButton: FloatingActionButton(
