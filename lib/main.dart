@@ -14,12 +14,16 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purpleAccent[700],
       ),
       body: Center(
-          child: FlatButton(
+          child: FlatButton.icon(
             onPressed: () {
               print("Ты клик на Меня!");
             },
-            child: Text('Twitch'),
+            label: Text('Twitch'),
             color: Colors.purpleAccent[700],
+            textColor: Colors.white,
+            icon: Icon(
+                Icons.mail
+            )
           )
       ),
       floatingActionButton: FloatingActionButton(
