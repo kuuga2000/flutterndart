@@ -5,7 +5,21 @@ void main() => runApp(MaterialApp(
     appBar: AppBar(
       title: Text('привиет!'),
       centerTitle: true,
+      backgroundColor: Colors.purpleAccent[700],
     ),
-    body: Text('Как дела!!')
+    body: Center(
+      child: Text(
+          "как дела?",
+        style: TextStyle(
+          fontSize: 40,
+          fontWeight: FontWeight.bold,
+          color: Colors.redAccent,
+          fontFamily: 'Lobster',
+        )
+      )
+    ),
+    floatingActionButton: FloatingActionButton(
+      child: Text("+")
+    ),
   )
 ));
