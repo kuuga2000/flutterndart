@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purpleAccent[700],
       ),
       body: Center(
-          child: RaisedButton(
+          child: FlatButton(
             onPressed: () {
               print("Ты клик на Меня!");
             },
