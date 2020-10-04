@@ -14,9 +14,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.purpleAccent[700],
       ),
       body: Center(
-          child: Image(
-            image: AssetImage('assets/images/grove-3799806_960_720.jpg')
-          )
+          child: Image.asset('assets/images/airplane-5216583_960_720.jpg'),
       ),
       floatingActionButton: FloatingActionButton(
           child: Text("+")
