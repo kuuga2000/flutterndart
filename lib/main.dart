@@ -15,12 +15,42 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
   List<Quote> quotes = [
-    Quote(author: "Zenyatta", text: "Repetition is the path to mastery"),
-    Quote(author: "Guo Songx", text: "You cannot after two horses at the same time"),
-    Quote(author: "Zenyatta", text: "The pain is the best teacher"),
+    Quote(author: "Zenyatta", text: "Repetition is the path to mastery x"),
+    Quote(author: "Guo Songx", text: "You cannot after two horses at the same time a"),
+    Quote(author: "Zenyatta", text: "The pain is the best teacher d"),
   ];
 
   Widget quoteTemplate(quote) {
+    return QuoteCard(quote: quote);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        title: Text("вапвапавп"),
+        centerTitle: true,
+        backgroundColor: Colors.deepPurpleAccent,
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        /*children: quotes.map((quote){
+          return Text(quote);
+        }).toList()*/
+        children: quotes.map((quote)=>quoteTemplate(quote)).toList(),
+      ),
+    );
+  }
+}
+
+class QuoteCard extends StatelessWidget {
+
+  final Quote quote;
+  QuoteCard({this.quote});
+
+  @override
+  Widget build(BuildContext context) {
     return Card (
       margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
       color: Colors.deepPurpleAccent,
@@ -47,25 +77,6 @@ class _QuoteListState extends State<QuoteList> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blueGrey,
-      appBar: AppBar(
-        title: Text("вапвапавп"),
-        centerTitle: true,
-        backgroundColor: Colors.deepPurpleAccent,
-      ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        /*children: quotes.map((quote){
-          return Text(quote);
-        }).toList()*/
-        children: quotes.map((quote)=>quoteTemplate(quote)).toList(),
       ),
     );
   }
