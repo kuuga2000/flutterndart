@@ -19,6 +19,38 @@ class _QuoteListState extends State<QuoteList> {
     Quote(author: "Guo Songx", text: "You cannot after two horses at the same time"),
     Quote(author: "Zenyatta", text: "The pain is the best teacher"),
   ];
+
+  Widget quoteTemplate(quote) {
+    return Card (
+      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+      color: Colors.deepPurpleAccent,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Text(
+              quote.text,
+              style: TextStyle(
+                fontSize: 18.0,
+                color:Colors.white
+              )
+            ),
+            SizedBox(height: 6.0),
+            Text(
+              quote.author,
+              textAlign: TextAlign.right,
+              style: TextStyle(
+                fontSize: 14.0,
+                color: Colors.lightGreen,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +65,7 @@ class _QuoteListState extends State<QuoteList> {
         /*children: quotes.map((quote){
           return Text(quote);
         }).toList()*/
-        children: quotes.map((quote)=>Text('${quote.text} - ${quote.author}')).toList(),
+        children: quotes.map((quote)=>quoteTemplate(quote)).toList(),
       ),
     );
   }
